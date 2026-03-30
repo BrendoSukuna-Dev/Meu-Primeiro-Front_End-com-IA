@@ -1,4 +1,4 @@
-<h1>Meu Primeiro Site</h1>
+<h1>Meu Primeiro Front_End com IA</h1>
 
 <h2>📋 Sobre o projeto</h2>
 <p>Este projeto marca meu início no desenvolvimento web, onde utilizei a Inteligência Artificial como uma parceira de programação (Pair Programming). O objetivo foi replicar a famosa tela de perfis da Netflix. Enquanto a IA auxiliou na geração estrutural do HTML e do CSS, dediquei meus esforços para ajustar o HTML e na estilização fina via CSS para garantir que os 4 perfis estivessem perfeitamente alinhados. Para dar um toque extra de funcionalidade, implementei via JavaScript um botão que altera o tema da tela entre claro e escuro, demonstrando conhecimentos básicos de lógica e manipulação do DOM.
