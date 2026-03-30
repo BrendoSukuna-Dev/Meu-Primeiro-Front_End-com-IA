@@ -1,0 +1,278 @@
+﻿/* ========== ESTILOS GLOBAIS E RESET ========== */
+
+/**
+ * BODY - Elemento raiz da página
+ * Define a cor de fundo principal (cinza escuro Netflix),
+ * tipografia, cores de texto e altura mínima para layout
+ */
+body {
+    background: #141414; /* Fundo escuro Netflix (#141414) */
+    color: #fff; /* Texto principal em branco */
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif; /* Fonte limpa e legível */
+    margin: 0; /* Remove margem padrão do browser */
+    min-height: 100vh; /* Garante altura mínima igual à viewport */
+}
+
+/* ========== MAIN - CONTAINER PRINCIPAL ========== */
+
+/**
+ * MAIN - Container flexbox centralizado
+ * Utiliza flexbox para centralizar todos os elementos
+ * tanto horizontal quanto verticalmente na tela
+ */
+main {
+    display: flex; /* Ativa layout flexbox */
+    flex-direction: column; /* Organiza elementos em coluna vertical */
+    align-items: center; /* Centraliza itens no eixo horizontal */
+    justify-content: center; /* Centraliza itens no eixo vertical */
+    min-height: 100vh; /* Altura mínima igual à altura da viewport */
+}
+
+/* ========== TÍTULOS (H1) ========== */
+
+/**
+ * H1 - Título principal "Quem está assistindo?"
+ * Define tamanho grande, peso da fonte e espaçamento
+ * para criar impacto visual na página de seleção
+ */
+h1 {
+    font-size: 2.5rem; /* Tamanho grande e legível */
+    font-weight: bold; /* Texto em negrito para destaque */
+    margin-bottom: 2rem; /* Espaço abaixo do título */
+    letter-spacing: 1px; /* Espaçamento entre letras para elegância */
+}
+
+/* ========== CONTAINER DE PERFIS ========== */
+
+/**
+ * SECTION[aria-label="Perfis disponíveis"]
+ * Wrapper que agrupa todos os perfis e os centraliza
+ * com largura máxima para melhor distribuição visual
+ */
+section[aria-label="Perfis disponíveis"] {
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 600px; /* Limita largura máxima para melhor visualização */
+    display: flex; /* Ativa flexbox */
+    justify-content: center; /* Centraliza os perfis horizontalmente */
+}
+
+/* ========== NAV.PROFILES - NAVEGAÇÃO DE PERFIS ========== */
+
+/**
+ * NAV.PROFILES - Container de navegação dos perfis
+ * Usa flexbox para distribuir horizontalmente os perfis
+ * com espaçamento uniforme entre eles
+ */
+nav.profiles {
+    display: flex; /* Ativa layout flexbox */
+    gap: 2rem; /* Espaço de 2rem entre cada perfil */
+}
+
+/* ========== UL - LISTA NÃO ORDENADA ========== */
+
+/**
+ * UL - Lista não ordenada de perfis
+ * Remove marcadores padrão, padding e margin
+ * Usa flexbox para layout responsivo com quebra de linha
+ */
+ul {
+    list-style: none; /* Remove marcadores de lista (bolinhas/números) */
+    padding: 0; /* Remove padding padrão do elemento lista */
+    margin: 0; /* Remove margin padrão do elemento lista */
+    display: flex; /* Ativa layout flexbox */
+    flex-wrap: wrap; /* Permite quebra de linha quando necessário */
+    justify-content: center; /* Centraliza itens horizontalmente */
+    gap: 1rem; /* Espaço de 1rem entre itens da lista */
+}
+
+/* ========== PROFILE - CARD INDIVIDUAL ========== */
+
+/**
+ * .PROFILE - Card individual de cada perfil
+ * Elemento clicável com transições suaves para hover
+ * Mantém cor branca do texto e remove decoração padrão
+ */
+.profile {
+    text-decoration: none; /* Remove sublinhado de links */
+    color: #fff; /* Cor do texto branco */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transições suaves para animações */
+}
+
+/* ========== FIGURE - ESTRUTURA DO PERFIL ========== */
+
+/**
+ * FIGURE - Elemento semântico que agrupa imagem e legenda
+ * Usa flexbox para organizar a imagem acima da legenda
+ * com centralização automática dos elementos
+ */
+figure {
+    margin: 0; /* Remove margem padrão */
+    display: flex; /* Ativa layout flexbox */
+    flex-direction: column; /* Organiza elementos em coluna */
+    align-items: center; /* Centraliza itens no eixo horizontal */
+}
+
+/* ========== IMG - IMAGEM DO PERFIL ========== */
+
+/**
+ * IMG - Avatar/Imagem do perfil de usuário
+ * Dimensões fixas com bordas arredondadas e efeito hover
+ * O background escuro funciona como fallback enquanto
+ * a imagem carrega
+ */
+img {
+    width: 120px; /* Largura fixa do quadrado */
+    height: 120px; /* Altura fixa do quadrado */
+    border-radius: 8px; /* Bordas ligeiramente arredondadas */
+    object-fit: cover; /* Mantém proporção da imagem dentro do container */
+    margin-bottom: 0.5rem; /* Espaço entre imagem e legenda */
+    background: #222; /* Cor de fundo enquanto carrega */
+    display: block; /* Exibe como bloco para remover espaços em branco */
+    border: 1px transparent; /* Borda invisível por padrão */
+}
+
+/* ========== IMG:HOVER - INTERATIVIDADE ========== */
+
+/**
+ * IMG:HOVER - Efeito ao passar o mouse sobre a imagem
+ * Adiciona uma borda branca sutil para indicar
+ * que o elemento é interativo (clicável)
+ */
+img:hover {
+    border: 1px solid #fff; /* Borda branca ao hover */
+}
+
+/* ========== FIGCAPTION - LEGENDA DO PERFIL ========== */
+
+/**
+ * FIGCAPTION - Nome do perfil exibido abaixo da imagem
+ * Define tamanho, peso e espaçamento para legibilidade
+ * Mantém alinhamento com a imagem acima
+ */
+figcaption {
+    font-size: 1.1rem; /* Tamanho aumentado para legibilidade */
+    font-weight: 500; /* Peso médio para destaque suave */
+    margin-top: 0.5rem; /* Espaço acima da legenda */
+    letter-spacing: 0.5px; /* Espaçamento entre letras */
+}
+
+/* ========== LIGHT MODE - TEMA CLARO ========== */
+
+/**
+ * BODY.LIGHT-MODE - Classe para ativar modo claro
+ * Inverte cores para fundo claro e texto escuro
+ * Melhor para ambientes com muita luz ou preferência do usuário
+ */
+body.light-mode {
+    background: #f5f5f5; /* Fundo claro (cinza muito claro) */
+    color: #222; /* Texto escuro para contraste */
+}
+
+/**
+ * .LIGHT-MODE .PROFILE - Links no modo claro
+ * Ajusta cor dos links para escuro no tema claro
+ * Mantém legibilidade e contraste adequado
+ */
+.light-mode .profile {
+    color: #222; /* Links em cor escura */
+}
+
+/**
+ * .LIGHT-MODE IMG - Imagens no modo claro
+ * Fundo e borda clara para imagens no tema claro
+ * Melhor integração visual com o fundo claro
+ */
+.light-mode img {
+    background: #eee; /* Fundo cinza claro para imagens */
+    border: 1px solid #ccc; /* Borda cinza clara */
+}
+
+/**
+ * .LIGHT-MODE IMG:HOVER - Hover de imagens no modo claro
+ * Borda escura ao passar mouse no tema claro
+ * Indica interatividade com contraste adequado
+ */
+.light-mode img:hover {
+    border: 1px solid #222; /* Borda escura ao hover */
+}
+
+/* ==========================================
+   RESPONSIVIDADE - MEDIA QUERIES POR DEVICE
+   Garante experiência visual ótima em todos
+   os tamanhos de tela (mobile, tablet, desktop)
+   ========================================== */
+
+/* ========== TABLETS E CELULARES GRANDES (até 900px) ========== */
+/**
+ * Media query para tablets e celulares grandes
+ * Remove limite de largura, adiciona padding lateral
+ * Reduz tamanho de imagens e título para melhor adaptação
+ */
+@media (max-width: 900px) {
+    section[aria-label="Perfis disponíveis"] {
+        max-width: 100%; /* Usa toda largura disponível */
+        padding: 0 1rem; /* Adiciona espaçamento lateral */
+    }
+
+    nav.profiles {
+        gap: 1rem; /* Reduz espaço entre perfis */
+    }
+
+    img {
+        width: 90px; /* Reduz largura da imagem */
+        height: 90px; /* Reduz altura da imagem */
+    }
+
+    h1 {
+        font-size: 2rem; /* Reduz tamanho do título */
+    }
+}
+
+/* ========== CELULARES PEQUENOS (até 600px) ========== */
+/**
+ * Media query para celulares pequenos
+ * Aumenta margem superior, remove altura mínima
+ * Perfis em coluna vertical com maior espaçamento
+ */
+@media (max-width: 600px) {
+    main {
+        margin-top: 6rem; /* Aumenta margem superior para espaço */
+        min-height: auto; /* Remove altura mínima fixa */
+        padding: 2rem 0; /* Padding vertical */
+    }
+
+    nav.profiles {
+        flex-direction: column; /* Perfis organizados em coluna */
+        align-items: center; /* Centraliza perfis na coluna */
+    }
+
+    ul {
+        gap: 4rem; /* Aumenta espaço entre itens da lista */
+    }
+}
+
+/* ========== DESKTOP E TELAS GRANDES (901px+) ========== */
+/**
+ * Media query para desktops e telas grandes
+ * Perfis em linha horizontal, imagens menores
+ * Otimiza para mouse e espaço amplo disponível
+ */
+@media (min-width: 901px) {
+    nav.profiles {
+        flex-direction: row; /* Perfis na horizontal */
+        align-items: center; /* Alinhamento central vertical */
+    }
+
+    img {
+        width: 70px; /* Imagens menores para desktop */
+        height: 70px; /* Altura proporcional */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Título menor para desktop */
+    }
+
+    figcaption {
+        font-size: 1rem; /* Legenda menor para desktop */
+    }
+}

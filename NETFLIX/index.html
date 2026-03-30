@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Atributo lang define o idioma da página como português brasileiro -->
+
+<head>
+    <!-- ========== META TAGS E CONFIGURAÇÕES ========== -->
+    
+    <!-- Define o conjunto de caracteres como UTF-8 (suporta caracteres especiais) -->
+    <meta charset="UTF-8">
+    
+    <!-- 
+      Viewport meta tag - Essencial para responsividade
+      width=device-width: adapta largura à largura do dispositivo
+      initial-scale=1.0: zoom inicial em 100% (sem zoom automático)
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título da página exibido na aba do navegador -->
+    <title>Netflix</title>
+    
+    <!-- ========== LINK PARA FOLHA DE ESTILOS ========== -->
+    
+    <!-- 
+      rel="stylesheet" indica que é uma folha de estilos CSS
+      href aponta para o arquivo style.css na mesma pasta
+    -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ========== CONTAINER PRINCIPAL ========== -->
+    
+    <!-- 
+      MAIN - Elemento semântico que encapsula o conteúdo principal
+      Centralizado por flexbox no CSS para layout vertical e horizontal
+    -->
+    <main>
+        <!-- ========== BOTÃO DE ALTERNÂNCIA DE TEMA ========== -->
+        
+        <!-- 
+          Button #theme-toggle
+          Propósito: Alternar entre modo escuro (dark) e claro (light)
+          
+          Atributos:
+          - id="theme-toggle": Identificador único para seleção em JS e CSS
+          - onclick="toggleTheme()": Chama função toggleTheme() ao clicar
+          - style="...": Estilos inline para posicionamento absoluto
+            * position:absolute: Posiciona de forma fixa na tela
+            * top:1rem: 16px do topo
+            * right:1rem: 16px da direita
+            * z-index:10: Fica acima de outros elementos
+            * background:none: Remove fundo padrão do botão
+            * border:none: Remove borda padrão do botão
+            * font-size:2rem: Tamanho grande do ícone (32px)
+            * cursor:pointer: Muda cursor para mão ao passar
+          - aria-label: Descrição para leitores de tela (acessibilidade)
+          
+          Conteúdo: Será preenchido dinamicamente por JavaScript (☀️ ou 🌙)
+        -->
+        <button id="theme-toggle" onclick="toggleTheme()" style="position:absolute;top:1rem;right:1rem;z-index:10;background:none;border:none;font-size:2rem;cursor:pointer" aria-label="Alternar tema"></button>
+        
+        <!-- ========== TÍTULO PRINCIPAL ========== -->
+        
+        <!-- 
+          H1 - Título principal da página
+          Texto: "Quem está assistindo?"
+          Semântica: Define o heading mais importante da página
+          Estilo: Tamanho grande (2.5rem na versão desktop), negrito, espaçamento
+        -->
+        <h1>Quem está assistindo?</h1>
+        
+        <!-- ========== SEÇÃO DE PERFIS ========== -->
+        
+        <!-- 
+          SECTION - Elemento semântico que agrupa conteúdo relacionado
+          aria-label="Perfis disponíveis": Descrição para leitores de tela
+          Este elemento encapsula toda a navegação de perfis
+        -->
+        <section aria-label="Perfis disponíveis">
+            <!-- ========== NAVEGAÇÃO DE PERFIS ========== -->
+            
+            <!-- 
+              NAV.PROFILES - Elemento semântico de navegação com classe profiles
+              Propósito: Indicar que este é um menu de navegação
+              class="profiles": Aplicar estilos CSS flexbox para layout horizontal
+            -->
+            <nav class="profiles">
+                <!-- ========== LISTA NÃO ORDENADA DE PERFIS ========== -->
+                
+                <!-- 
+                  UL - Lista não ordenada (unordered list)
+                  Propósito: Agrupar semanticamente múltiplos perfis
+                  Estilos CSS: Flexbox com gap, flex-wrap, list-style:none
+                -->
+                <ul>
+                    <!-- ========== PERFIL 1 - GUSTAVO ========== -->
+                    
+                    <!-- 
+                      LI - Item da lista não ordenada
+                      Continente: Um link de perfil (card clicável)
+                    -->
+                    <li>
+                        <!-- 
+                          A.PROFILE - Link semântico com classe profile
+                          href="#": URL temporária (normalmente levaria a página de séries)
+                          class="profile": Aplica estilos de card (flexbox, transições, hover)
+                          Propósito: Permitir clique/navegação ao selecionar perfil
+                        -->
+                        <a href="#" class="profile">
+                            <!-- 
+                              FIGURE - Elemento semântico que agrupa imagem com legenda
+                              Propósito: Associar semanticamente imagem e figcaption
+                            -->
+                            <figure>
+                                <!-- 
+                                  IMG - Imagem do perfil (avatar)
+                                  src: Caminho da imagem no servidor
+                                  alt: Descrição alternativa (acessibilidade, SEO, fallback)
+                                  
+                                  Estilos CSS:
+                                  - width/height: 120px (quadrado)
+                                  - border-radius: 8px (cantos arredondados)
+                                  - object-fit: cover (mantém proporção)
+                                  - border: 1px transparent (invisível por padrão)
+                                  - hover: border branca aparece
+                                -->
+                                <img src="/NETFLIX/assents/perfil-1.png" alt="Personagem gótico e esguio em um cenário surrealista de stop-motion com
+                                 estética melancólica inspirada em Tim Burton.">
+                                
+                                <!-- 
+                                  FIGCAPTION - Legenda/Descrição da figura (imagem)
+                                  Exibe o nome do perfil abaixo da imagem
+                                  Estilos CSS: font-size 1.1rem, peso 500, espaçamento
+                                -->
+                                <figcaption>Gustavo</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    
+                    <!-- ========== PERFIL 2 - THIAGO ========== -->
+                    <li>
+                        <a href="#" class="profile">
+                            <figure>
+                                <img src="/NETFLIX/assents/perfil-2.png" alt="Imagem de um boné azul">
+                                <figcaption>Thiago</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    
+                    <!-- ========== PERFIL 3 - THAMIRIS ========== -->
+                    <li>
+                        <a href="#" class="profile">
+                            <figure>
+                                <img src="/NETFLIX/assents/perfil-3.png" alt="Esta imagem apresenta um jovem piloto steampunk com óculos, traje detalhado
+                                 e manômetros, em frente a uma cidade industrial esfumaçada com dirigíveis no céu.">
+                                <figcaption>Thamiris</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    
+                    <!-- ========== PERFIL 4 - VINI ========== -->
+                    <li>
+                        <a href="#" class="profile">
+                            <figure>
+                                <img src="/NETFLIX/assents/perfil-4.png" alt="Um ciborgue androide de estética futurista com traços
+                                 humanos realistas, revelando circuitos internos iluminados por um brilho vermelho neon sob uma pele translúcida.">
+                                <figcaption>Vini</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </main>
+    
+    <!-- ========== SCRIPTS EXTERNOS ========== -->
+    
+    <!-- 
+      Script theme.js
+      Propósito: Importar e executar funções JavaScript para:
+      1. Alternar entre modo escuro e claro
+      2. Salvar preferência no localStorage
+      3. Aplicar tema salvo ao carregar página
+      
+      atributo src: Caminho relativo do arquivo JavaScript
+      Posição: Antes de </body> para melhor performance (DOM carrega primeiro)
+    -->
+    <script src="theme.js"></script>
+</body>
+
+</html>
