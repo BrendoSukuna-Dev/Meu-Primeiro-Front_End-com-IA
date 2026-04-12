@@ -12,10 +12,10 @@ Além de pedir para o agente do copilot, gerar comentários sobre cada funcional
 
 <p><h3>✦ Principais funcionalidades:</h3></p>
 
-<p>⇢ ​Estruturação: HTML semântico com foco em acessibilidade e hierarquia de componentes.</p>
-<p>⇢ ​Estilização: CSS avançado para replicação de identidade visual de grandes plataformas de streaming.</p>
-<p>⇢ Interatividade: Desenvolvimento de um toggle de temas (Claro/Escuro) via JavaScript para manipulação dinâmica de classes CSS.</p>
-<p>⇢ ​Metodologia: Fluxo de trabalho otimizado com auxílio de IA para geração de código base e prototipagem rápida.</p>
+<p>➥ ​Estruturação: HTML semântico com foco em acessibilidade e hierarquia de componentes.</p>
+<p>➥ ​Estilização: CSS avançado para replicação de identidade visual de grandes plataformas de streaming.</p>
+<p>➥ Interatividade: Desenvolvimento de um toggle de temas (Claro/Escuro) via JavaScript para manipulação dinâmica de classes CSS.</p>
+<p>➥ ​Metodologia: Fluxo de trabalho otimizado com auxílio de IA para geração de código base e prototipagem rápida.</p>
 
 ## 🖥 Tecnologias utilizadas no projeto
 <div>
